@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 import MainLayout from "layouts/MainLayout";
 import JobList from "components/JobList";
 import { useAppDispatch, useAppSelector } from "app/hooks";
 import { RootState } from "app/store";
 import { getAllJobs, setFilterByWallet } from "redux/slices/jobSlice";
-import "../styles/mixin/_title.css";
+import "styles/mixin/_title.css";
 
 const Home = () => {
 	const filterByWallet = useAppSelector(
@@ -37,7 +38,7 @@ const Home = () => {
 					<div className="h-[5vh]"></div>
 				</div>
 				<div className="container justify-center items-center">
-					<Link to="/register/job" className="font-bold">
+					<Link href="/register/job" className="font-bold">
 						<button className="primary">Post a job</button>
 					</Link>
 				</div>

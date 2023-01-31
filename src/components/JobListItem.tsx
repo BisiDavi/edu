@@ -1,5 +1,5 @@
-// import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 import { getDateFormat } from "utils/job";
 
 type Props = {
@@ -7,15 +7,12 @@ type Props = {
 };
 
 const JobListItem = (props: Props) => {
-	// const [shown, setShown] = useState(false);
 	const { job } = props;
 
 	return (
 		<Link
-			// to={`/job/${job._id}`}
-			to="/"
+			href="/"
 			className=" gap-4 transition-all duration-200 ease-in-out border-2 border-lightgrey rounded-md p-4 bg-white hover:shadow-md shadow-indigo-500/50"
-			// onClick={() => setShown((prev) => !prev)}
 		>
 			<div className="text-sm text-darkgrey" style={{ float: "right" }}>
 				{getDateFormat(job.postedAt)}{" "}
@@ -49,19 +46,7 @@ const JobListItem = (props: Props) => {
 						))}
 					</div>
 				</div>
-				{/* <div
-					className={`${
-						shown ? "h-[100%]" : "h-0"
-					} overflow-hidden transition-transform duration-200 ease-in-out w-full text-sm`}
-				>
-					<p className="mt-4 font-bold">
-						Description
-						<br />
-					</p>
-					<textarea className="w-full p-2" max-rows={10} disabled defaultValue={job.description} />
-				</div> */}
 			</div>
-			{/* <div className="text-primary mt-12 ml-auto font-bold sm:hidden">Read more</div> */}
 		</Link>
 	);
 };

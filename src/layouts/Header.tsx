@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { setupWalletSelector } from "@near-wallet-selector/core";
-import { setupModal } from "@near-wallet-selector/modal-ui";
 import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import axios from "axios";
 import * as buffer from "buffer";
+
+import { setupWalletSelector } from "@near-wallet-selector/core";
+import { setupModal } from "@near-wallet-selector/modal-ui";
 import { useAppDispatch } from "app/hooks";
 import { setBadges } from "redux/slices/jobSlice";
 
@@ -51,21 +52,19 @@ const Header = () => {
 			network: process.env.REACT_APP_NEAR_ENV as any,
 			modules: [setupNearWallet()],
 		});
-		// if (selector?.isSignedIn()) {
 		const wallet = await selector.wallet();
 		await wallet.signOut();
 		setAccountId("");
-		// }
 	};
 
 	return (
 		<header>
 			<div className="flex items-center justify-start shadow-md h-16 px-4">
-				<Link to="/">
+				<Link href="/">
 					<img src="/images/near_logo.png" alt="Logo" className="w-32 lg:w-24" />
 				</Link>
 				<div className="">
-					<Link to="/register/company" className="p-2.5 ml-[1vw]">
+					<Link href="/register/company" className="p-2.5 ml-[1vw]">
 						Register company
 					</Link>
 				</div>
@@ -73,9 +72,6 @@ const Header = () => {
 
 			<div className="flex justify-end">
 				<nav className="mt-[-2.5%] mr-[2%]">
-					{/* <Link to="/register/job" className="font-bold">
-					Post a job
-				</Link> */}
 					<button className="font-bold" onClick={handleLogout}>
 						Log out
 					</button>

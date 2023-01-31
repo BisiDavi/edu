@@ -33,6 +33,7 @@
 		"near-api-js": "^1.1.0",
 		"near-cli": "^3.4.2",
 		"near-wallet-selector": "^2.1.0",
+		"next": "^13.1.6",
 		"nodemon": "^2.0.20",
 		"react": "^18.2.0",
 		"react-content-loader": "^6.2.0",
@@ -50,12 +51,16 @@
 		"typescript": "^4.4.2",
 		"web-vitals": "^2.1.0"
 	},
+	"proxy": "https://web3.career/api/v1",
 	"scripts": {
 		"dev-client": "react-scripts start",
 		"dev-server": "nodemon server/index",
-		"dev": "concurrently \"npm:dev-server\" \"npm:dev-client\"",
+		"dev-start": "concurrently \"npm:dev-server\" \"npm:dev-client\"",
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
 		"db-seed": "node server/seeds/index",
-		"build": "react-scripts build",
+		"react-build": "react-scripts build",
 		"prod": "concurrently  \"npm:dev-server\" \"npm:build\"",
 		"postinstall": "echo rs tests && echo rs contract"
 	},

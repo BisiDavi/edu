@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import { getJobPostDate } from "utils/getTimeDifference";
 import toSlug from "utils/toSlug";
@@ -12,7 +12,7 @@ export default function JobCard({ job }: Props) {
 	const jobSlug = toSlug(`${job.title}-at-${job.company}`);
 	const postedDaysAgo = getJobPostDate(job.date);
 	return (
-		<Link to={`/job-board/${jobSlug}`}>
+		<Link href={`/job-board/${jobSlug}`}>
 			<div className="jobcard border h-52 bg-white border-gray rounded-xl py-5 px-4 hover:bg-lightgrey">
 				<div className="top flex items-start justify-between">
 					<div className="w-full">

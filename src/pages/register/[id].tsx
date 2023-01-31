@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import MainLayout from "layouts/MainLayout";
 import { useAppSelector } from "app/hooks";
 import { RootState } from "app/store";
@@ -11,7 +12,7 @@ const Applicant = (props: Props) => {
 	const _id = useParams();
 	const jobs = useAppSelector((state: RootState) => state.jobSlice.jobs);
 
-  console.log(jobs)
+	console.log(jobs);
 	useEffect(() => {
 		for (let _job of jobs) {
 			if (_job._id === _id) {

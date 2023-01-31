@@ -1,4 +1,3 @@
-import "styles/spinner_ripple.css";
 interface Props {
 	centerRipple?: boolean;
 }

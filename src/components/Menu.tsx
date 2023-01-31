@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 
 import menuContent from "json/menu.json";
 
@@ -13,12 +13,12 @@ export default function Menu() {
 			<ul className="flex space-x-6">
 				{menuContent.map((item) => (
 					<li key={item.text}>
-						<NavLink
-							to={item.link}
-							style={({ isActive }) => (isActive ? activeStyle : undefined)}
+						<Link
+							href={item.link}
+							// style={({ isActive }) => (isActive ? activeStyle : undefined)}
 						>
 							{item.text}
-						</NavLink>
+						</Link>
 					</li>
 				))}
 			</ul>
