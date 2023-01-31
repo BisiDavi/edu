@@ -53,9 +53,10 @@
 	"scripts": {
 		"dev-client": "react-scripts start",
 		"dev-server": "nodemon server/index",
-		"start": "concurrently \"npm:dev-server\" \"npm:dev-client\"",
-		"db:seed": "node server/seeds/index",
+		"dev": "concurrently \"npm:dev-server\" \"npm:dev-client\"",
+		"db-seed": "node server/seeds/index",
 		"build": "react-scripts build",
+		"prod": "concurrently  \"npm:dev-server\" \"npm:build\"",
 		"postinstall": "echo rs tests && echo rs contract"
 	},
 	"eslintConfig": {
