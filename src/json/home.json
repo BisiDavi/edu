@@ -9,7 +9,7 @@
 		"features": [
 			{ "icon": "/images/discover_content.svg", "title": "Discover Content" },
 			{ "icon": "/images/take_classes.svg", "title": "Take Classes" },
-			{ "icon": "/images/earn_badges.svg", "title": "Earn Badges" },
+			{ "icon": "/images/badge.svg", "title": "Earn Badges" },
 			{ "icon": "/images/generate_resume.svg", "title": "Generate Resume" }
 		]
 	},

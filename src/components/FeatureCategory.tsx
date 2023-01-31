@@ -19,9 +19,9 @@ export default function FeatureCategory({ category }: Props) {
 					height="76px"
 					width="60px"
 				/>
-				<h4 className={`${titleOrder.title} font-dmsans font-bold text-primary`}>
+				<h3 className={`${titleOrder.title} font-lora text-xl font-bold text-primary`}>
 					{homeContent[category].title}
-				</h4>
+				</h3>
 			</div>
 			<ul className="list flex  space-x-20">
 				{homeContent[category].features.map((item, index) => {
