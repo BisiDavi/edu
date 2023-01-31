@@ -27,6 +27,5 @@ export const getDateFormat = (date: string) => {
 
 export async function getWeb3Jobs() {
 	const result = await axios.get(`/api/jobs`);
-	console.log("result", result);
 	return result;
 }

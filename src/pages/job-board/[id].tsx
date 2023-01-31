@@ -7,7 +7,6 @@ import { getWeb3Jobs } from "utils/job";
 import SpinnerRipple from "components/SpinnerRipple";
 import JobDetails from "components/JobDetails";
 import type { jobType } from "@types";
-import "styles/jobboardDetails.css";
 
 export default function JobboardDetailsView() {
 	const router = useRouter();
@@ -17,9 +16,11 @@ export default function JobboardDetailsView() {
 		status === "success"
 			? data.data[2].filter((item) => {
 					const jobSlug = toSlug(`${item.title}-at-${item.company}`);
-					return router.pathname.includes(jobSlug);
+					return router.asPath.includes(jobSlug);
 			  })[0]
 			: null;
+
+	console.log("router", router);
 
 	return (
 		<NFTLayout title="Job board" className="jobboard pb-14">
