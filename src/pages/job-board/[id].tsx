@@ -20,8 +20,6 @@ export default function JobboardDetailsView() {
 			  })[0]
 			: null;
 
-	console.log("router", router);
-
 	return (
 		<NFTLayout title="Job board" className="jobboard pb-14">
 			<section className="container py-8 text-primary">
