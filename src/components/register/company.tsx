@@ -10,7 +10,6 @@ import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { RootState } from "redux/store";
 import { generateRandomToken } from "utils";
 import { getCompanyList } from "redux/slices/companySlice";
-import "../../styles/mixin/_title.css";
 
 const Company = () => {
 	const dispatch = useAppDispatch();

@@ -9,7 +9,6 @@ import FinalFormInput from "components/FinalFormInput";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { RootState } from "redux/store";
 import { getAllJobs } from "redux/slices/jobSlice";
-import "../../styles/mixin/_title.css";
 
 const Company = () => {
 	const dispatch = useAppDispatch();

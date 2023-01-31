@@ -2,14 +2,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { setupNearWallet } from "@near-wallet-selector/near-wallet";
 import axios from "axios";
-import * as buffer from "buffer";
+// import * as buffer from "buffer";
 
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupModal } from "@near-wallet-selector/modal-ui";
 import { useAppDispatch } from "hooks/useRedux";
 import { setBadges } from "redux/slices/jobSlice";
 
-(window as any).Buffer = buffer.Buffer;
+// (window as any).Buffer = buffer.Buffer;
 
 const Header = () => {
 	const dispatch = useAppDispatch();

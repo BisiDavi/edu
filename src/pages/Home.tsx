@@ -6,7 +6,6 @@ import JobList from "components/JobList";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { RootState } from "redux/store";
 import { getAllJobs, setFilterByWallet } from "redux/slices/jobSlice";
-import "styles/mixin/_title.css";
 
 const Home = () => {
 	const filterByWallet = useAppSelector(

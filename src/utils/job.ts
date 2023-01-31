@@ -21,10 +21,6 @@ export const getDateFormat = (date: string) => {
 	return `${date.slice(5, 7)}/${date.slice(8, 10)}/${date.slice(0, 4)}`;
 };
 
-// export function getWeb3Jobs() {
-// 	return axios.get("http://localhost:8080/api/job/web3");
-// }
-
 export async function getWeb3Jobs() {
 	const result = await axios.get(`/api/jobs`);
 	return result;
