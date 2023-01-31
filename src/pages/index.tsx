@@ -7,7 +7,7 @@ import FeatureCategory from "components/FeatureCategory";
 
 export default function HomePage() {
 	return (
-		<NFTLayout title="Welcome, starting learning, earning NFTs | EduCoin">
+		<NFTLayout title="Welcome, start learning, earning NFTs">
 			<section className="w-full bg-primary">
 				<div className="container mx-auto">
 					<div className="hero-banner flex justify-between py-20">
