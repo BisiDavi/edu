@@ -3,6 +3,7 @@ require("dotenv").config();
 const db = require("../models");
 module.exports = {
 	init: () => {
+		db.mongoose.set("strictQuery", false);
 		db.mongoose.connect(process.env.MONGO_URL, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
