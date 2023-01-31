@@ -3,6 +3,8 @@ import NFTLayout from "layouts/NFTLayout";
 import homeContent from "json/home.json";
 import FeatureCategory from "components/FeatureCategory";
 
+// homepage
+
 export default function HomePage() {
 	return (
 		<NFTLayout title="Welcome, starting learning, earning NFTs | EduCoin">
