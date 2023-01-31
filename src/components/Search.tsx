@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "components/Button";
-import { useAppDispatch, useAppSelector } from "app/hooks";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { clearSearch, searchJobs } from "redux/slices/searchSlice";
 
 export default function Search() {

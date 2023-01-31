@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import MainLayout from "layouts/MainLayout";
-import { useAppSelector } from "app/hooks";
-import { RootState } from "app/store";
+import { useAppSelector } from "hooks/useRedux";
+import { RootState } from "redux/store";
 
 type Props = {};
 

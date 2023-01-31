@@ -6,7 +6,7 @@ import * as buffer from "buffer";
 
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupModal } from "@near-wallet-selector/modal-ui";
-import { useAppDispatch } from "app/hooks";
+import { useAppDispatch } from "hooks/useRedux";
 import { setBadges } from "redux/slices/jobSlice";
 
 (window as any).Buffer = buffer.Buffer;

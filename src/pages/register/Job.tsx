@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import MainLayout from "layouts/MainLayout";
 import FinalFormInput from "components/FinalFormInput";
-import { useAppDispatch, useAppSelector } from "app/hooks";
-import { RootState } from "app/store";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { RootState } from "redux/store";
 import { getAllJobs } from "redux/slices/jobSlice";
 import "../../styles/mixin/_title.css";
 

@@ -1,5 +1,5 @@
-import { useAppSelector } from "app/hooks";
-import { RootState } from "app/store";
+import { useAppSelector } from "hooks/useRedux";
+import { RootState } from "redux/store";
 import JobListItem from "./JobListItem";
 
 const JobList = () => {

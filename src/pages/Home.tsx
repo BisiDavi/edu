@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import MainLayout from "layouts/MainLayout";
 import JobList from "components/JobList";
-import { useAppDispatch, useAppSelector } from "app/hooks";
-import { RootState } from "app/store";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { RootState } from "redux/store";
 import { getAllJobs, setFilterByWallet } from "redux/slices/jobSlice";
 import "styles/mixin/_title.css";
 
