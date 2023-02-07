@@ -1,7 +1,8 @@
 import Link from "next/link";
-
-import menuContent from "json/menu.json";
 import { useRouter } from "next/router";
+
+import Button from "components/Button";
+import menuContent from "json/menu.json";
 
 export default function Menu() {
 	const router = useRouter();
@@ -24,7 +25,7 @@ export default function Menu() {
 					);
 				})}
 			</ul>
-			{/* <img src="/images/dino-icons.png" alt="dino-icon" className="w-8" /> */}
+			<Button className="mx-4 border rounded-full px-6 py-1.5" text="Login" />
 		</nav>
 	);
 }
